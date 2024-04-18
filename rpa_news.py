@@ -11,8 +11,9 @@ excel = Files()
 work_items = WorkItems()
 http = HTTP()
 
-# Load the work item
-work_item = work_items.load_work_item_by_id("28e90c50-509b-4a6c-a64c-a7a687a9c5e8")
+# Load the work item by its ID
+work_item_id = "28e90c50-509b-4a6c-a64c-a7a687a9c5e8"
+work_item = work_items.get_work_item_variable(work_item_id)
 
 # Get the search phrase and news category from the work item
 search_phrase = work_item.get("search_phrase")
